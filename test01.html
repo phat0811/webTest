@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item-left{
+            /* background-color: aqua; */
+            padding: 20px;
+            margin: 20px;
+            margin-top: 50px;
+            height: 500px;
+            width: 350px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .item-right{
+            background-color: bisque;
+            background-image: url('https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/12/hinh-nen-dien-thoai-35.jpg');
+            margin-top: 50px;
+            height: 600px;
+            width: 350px;
+        }
+
+        .box{
+            display: flex;
+            flex-direction: column;
+            /* background-color: blueviolet; */
+            position: relative;
+            padding: 10px;
+            margin: 20px;
+            height: 50px;
+            width: 280px;
+            text-align: left;
+            color: black;
+            border: 1px solid #5ec7ea;
+        }
+
+        .box i {
+            position: absolute;
+            right: 10px;
+            top: 70%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #aaa;
+        }
+
+        .box input{
+            border: 0;
+        }
+
+        .box-submit{
+            display: flex;
+            flex-direction: column;
+            background-color: #5ec7ea;
+            padding: 10px;
+            margin: 20px;
+            height: 30px;
+            width: 280px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+
+        .submit{
+            background-color: #5ec7ea;
+            color: white;
+            text-align: center;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .box-icon{
+            display: flex;
+            flex-direction:row;
+            justify-content: space-around;
+            /* background-color: blueviolet; */
+            padding: 5px;
+            margin: 5px;
+            width: 280px;
+        }
+
+        .icon{
+            height: 30px;
+            width: 60px;
+            padding: 6px;
+            background-color: #ececec;
+            border-radius: 30%;
+            border: 2px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .icon img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="item-left">
+            <h1>Create an account</h1>
+
+            <form action="/login" method="post">
+                <div class="box">
+                    <label for="fullname"><b>Full name</b></label>
+                    <input type="text" id="fullname" name="fullname">
+                </div>
+                <div class="box">
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" id="email" name="email" placeholder="example.email@gmail.com">
+                </div>
+                <div class="box">
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" id="password" name="password" placeholder="Enter at least 8+ characters">
+                    <i class="fas fa-eye-slash" id="togglePassword"></i>
+                </div>
+
+                <div class="box-submit">
+                    <input type="submit" class="submit" value="Sign in">
+                </div>
+                
+            </form>
+
+            <h4>Or sign in with</h4>
+            
+            <div class="box-icon">
+                <div class="icon"><a href="https://www.google.com/"><img src="https://w7.pngwing.com/pngs/817/967/png-transparent-gmail-logo-gmail-email-icon-logo-gmail-logo-angle-text-rectangle-thumbnail.png" alt="logo G"></a></div>
+                <div class="icon"><a href="https://www.google.com/"><img src="https://cdn.freebiesupply.com/logos/large/2x/facebook-logo-2019.svg" alt="logo F"></a></div>
+                <div class="icon"><a href="https://www.google.com/"><img src="https://cdn.freebiesupply.com/images/large/2x/apple-logo-transparent.png" alt="logo A"></a></div>
+                
+            </div>
+
+
+        </div>
+
+        <div class="item-right">
+        </div>
+
+    </div>
+
+
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword'); 
+        const password = document.querySelector('#password');
+        togglePassword.addEventListener('click', function (e){
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+    
+</body>
+</html>
