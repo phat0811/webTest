@@ -1,113 +1,162 @@
  * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
 
-        .container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
+ .container {
+     background: #FFFFFFFF;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100hv;
+        height: 100vh;
+     border-radius: 8px;
 
-        .item-left {
-            /* background-color: aqua; */
-            padding: 20px;
-            margin: 20px;
-            margin-top: 50px;
-            height: 500px;
-            width: 350px;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+ }
 
-        .item-right {
-            display: flex;
-            background-color: #00BDD6FF;
-            /* background-image: url('https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/12/hinh-nen-dien-thoai-35.jpg'); */
-            margin-top: 50px;
-            height: 618px;
-            width: 445px;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+ .container .content {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     background: #FFFFFFFF;
+     margin: 80px auto;
+     max-width: 996px;
+     height: 618px;
+ }
 
-        .box {
-            display: flex;
-            flex-direction: column;
-            /* background-color: blueviolet; */
-            position: relative;
-            padding: 10px;
-            margin: 20px;
-            height: 50px;
-            width: 280px;
-            text-align: left;
-            color: black;
-            border: 1px solid #5ec7ea;
-        }
+ .item-left {
+     /* background-color: aqua; */
+     padding: 20px;
+     margin: 20px;
+     margin-top: 50px;
+     height: 500px;
+     width: 350px;
+     display: flex;
+        flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+ }
 
-        .box i {
-            position: absolute;
-            right: 10px;
-            top: 70%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            color: #aaa;
-        }
+ .item-right {
+     display: flex;
+     background-color: #00BDD6FF;
+     margin-top: 50px;
+     height: 618px;
+     width: 445px;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     border-radius: 0px 8px 8px 0px;
+ }
 
-        .box input {
-            border: 0;
-        }
+ .item-right img {
+     top: 100px;
+     left: 0px;
+     width: 445px;
+     height: 418px;
+     border-radius: 0px;
+ }
 
-        .box-submit {
-            display: flex;
-            flex-direction: column;
-            background-color: #5ec7ea;
-            padding: 10px;
-            margin: 20px;
-            height: 30px;
-            width: 280px;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            color: black;
-        }
+ .box:focus-within {
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     padding: 10px;
+     margin: 20px;
+     height: 52px;
+    width: 360px;
+     text-align: left;
+     color: black;
+     border: 1px solid #00BDD6FF;
+     box-shadow: 0 0 0 4px #00BDD622;
+     transition: all 300ms ease-in-out;
+     background: white;
+ }
 
-        .submit {
-            background-color: #5ec7ea;
-            color: white;
-            text-align: center;
-            border: 0;
-            cursor: pointer;
-        }
+ .box{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: left;
+    color: black;
+    padding: 10px;
+    margin: 20px;
+    height: 52px;
+    width: 360px;
+    border-radius: 4px;
+    background: #F3F4F6;
+    border: 1px solid #F3F4F6FF;
+    box-sizing: border-box;
 
-        .box-icon {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            /* background-color: blueviolet; */
-            padding: 5px;
-            margin: 5px;
-            width: 280px;
-        }
+}
 
-        .icon {
-            height: 30px;
-            width: 60px;
-            padding: 6px;
-            background-color: #ececec;
-            border: 2px;
-            border-radius: 18px; 
-            overflow: hidden;
-            cursor: pointer;
-        }
+ .box i {
+     position: absolute;
+     right: 10px;
+     top: 70%;
+     transform: translateY(-50%);
+     cursor: pointer;
+     color: #aaa;
+ }
 
-        .icon img {
-            max-width: 100%;
-            max-height: 100%;
-        }
+ .box input {
+     border: 0;
+     background: #F3F4F6;
+ }
 
-       
+ .box input:focus-within {
+    outline: none;
+    background: white;
+    border: none;
+}
+
+ .box-submit {
+     display: flex;
+     flex-direction: column;
+     background-color: #5ec7ea;
+     padding: 10px;
+     margin: 20px;
+     height: 30px;
+     width: 360px;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+     color: black;
+ }
+
+ .submit {
+     background-color: #5ec7ea;
+     color: white;
+     text-align: center;
+     border: 0;
+     cursor: pointer;
+ }
+
+ .box-icon {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     /* background-color: blueviolet; */
+     padding: 5px;
+     margin: 5px;
+     width: 280px;
+ }
+
+ .icon {
+     height: 30px;
+     width: 60px;
+     padding: 6px;
+     background-color: #ececec;
+     border: 2px;
+     border-radius: 18px;
+     overflow: hidden;
+     cursor: pointer;
+ }
+
+ .icon img {
+     max-width: 100%;
+     max-height: 100%;
+ }
